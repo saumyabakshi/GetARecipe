@@ -8,5 +8,6 @@ import reactor.core.publisher.Flux;
 @Repository
 public interface RecipeRepository extends ReactiveMongoRepository<RecipeDTO, String> {
 
-    Flux<RecipeDTO> findByIngredient(String ingredient);
+    Flux<RecipeDTO> findByTitleContaining(String ingredient);
+
 }
